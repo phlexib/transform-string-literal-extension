@@ -1,0 +1,45 @@
+{
+    "name": "string-literal-to-es2015",
+    "displayName": "String Literal To ES2015",
+    "description": "Transform a String Literal into a ES2015 compatible string",
+    "version": "0.0.1",
+    "publisher": "benrohel",
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.transformStringLiteral"
+    ],
+    "main": "./src/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.transformStringLiteral",
+                "title": "Transform String Literal"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "babel-core": "^6.26.3",
+        "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+        "eslint": "^4.11.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6"
+    },
+    "dependencies": {
+        "dedent": "^0.7.0",
+        "del": "^3.0.0",
+        "gulp": "^3.9.1",
+        "gulp-parcel": "^0.3.5",
+        "vsce": "^1.42.0"
+    }
+}
