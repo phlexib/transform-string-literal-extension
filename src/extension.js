@@ -34,10 +34,12 @@ function activate(context) {
       
       
       function checkSelectedText(selectedText) {
-        selectedText.replace(/^\s*`/g,"`");
-        selectedText.replace(/[\t]+$/gm,"");
+        selectedText = selectedText.replace(/^\s*`/g,"`");
+        selectedText = selectedText.replace(/[ \t\r\n]+$/gm,"");
+        const regStart = /^`/g;
+        const regEnd = /`$/gm;
         console.log(selectedText);
-        if((selectedText.match(/^`/g)) && (selectedText.match(/`$/gm))) {
+        if((regStart.test(selectedText)) && (regEnd.test(selectedText))) {
           return true;
         }else{
           vscode.window.showErrorMessage(
