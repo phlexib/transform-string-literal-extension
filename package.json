@@ -2,7 +2,7 @@
     "name": "string-literal-to-es2015",
     "displayName": "String Literal To ES2015",
     "description": "Transform a String Literal into a ES2015 compatible string",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "benrohel",
     "engines": {
         "vscode": "^1.24.0"
